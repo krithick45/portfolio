@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-ink: #0B1020;
+  --color-panel: #111A2E;
+  --color-brand: #6C63FF;
+  --color-sky: #38BDF8;
+  --color-lilac: #A78BFA;
+  --color-fg: #F8FAFC;
+  --color-muted: #A7B2C7;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: #0B1020; color: #F8FAFC; font-family: var(--font-sans); overflow-x: hidden; -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(60rem 40rem at 10% -10%, rgba(108,99,255,.18), transparent 60%), radial-gradient(50rem 30rem at 100% 30%, rgba(56,189,248,.10), transparent 60%); background-attachment: fixed; }
+.grad-text { background: linear-gradient(90deg,#38BDF8,#6C63FF 55%,#A78BFA); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-bg { background: linear-gradient(135deg,#38BDF8,#6C63FF 55%,#A78BFA); }
+.glass { background: rgba(17,26,46,.65); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(12px); box-shadow: 0 10px 40px -20px rgba(0,0,0,.6); }
+.card-hover { transition: transform .25s, border-color .25s; }
+.card-hover:hover { transform: translateY(-4px); border-color: rgba(108,99,255,.55); }
+:focus-visible { outline: 2px solid #38BDF8; outline-offset: 3px; border-radius: 8px; }
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+.float { animation: float 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
